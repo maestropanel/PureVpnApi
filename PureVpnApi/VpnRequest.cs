@@ -68,30 +68,31 @@
         }
 
 
-        public VpnRequest Create()
+        public VpnResponse Create()
         {
             AddValue("method", "create");
-            return this;
+
+            return Send();
         }
 
         /// <summary>
         /// Username required
         /// </summary>
         /// <returns></returns>
-        public VpnRequest Renew()
+        public VpnResponse Renew()
         {
             AddValue("method", "renew");
-            return this;
+            return Send();
         }
 
         /// <summary>
         /// Username required
         /// </summary>
         /// <returns></returns>
-        public VpnRequest FindStatus()
+        public VpnResponse FindStatus()
         {
             AddValue("method", "status");
-            return this;
+            return Send();
         }
 
 
@@ -99,10 +100,10 @@
         /// Username required
         /// </summary>
         /// <returns></returns>
-        public VpnRequest Delete()
+        public VpnResponse Delete()
         {
             AddValue("method", "delete");
-            return this;
+            return Send();
         }
 
         /// <summary>
@@ -110,12 +111,12 @@
         /// </summary>
         /// <param name="updateStatus">enable,disable</param>
         /// <returns></returns>
-        public VpnRequest Update(string updateStatus)
+        public VpnResponse Update(string updateStatus)
         {
             AddValue("method", "update_status");
             AddValue("update_status", updateStatus);
 
-            return this;
+            return Send();
         }
 
         /// <summary>
@@ -123,15 +124,15 @@
         /// </summary>
         /// <param name="newPassword">New Password, Must be Alphanumeric and length should be 8 characters</param>
         /// <returns></returns>
-        public VpnRequest ChangePassword(string newPassword)
+        public VpnResponse ChangePassword(string newPassword)
         {
             AddValue("method", "change_password");
             AddValue("new_pass", newPassword);
 
-            return this;
+            return Send();
         }
 
-        public VpnResponse Send()
+        private VpnResponse Send()
         {
             var remoteResponse = SendHttpRequest(API_HOST, "POST", args.ToString());
             var responseObject = DeSerializeObject<VpnResponse>(remoteResponse);

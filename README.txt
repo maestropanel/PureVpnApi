@@ -15,8 +15,7 @@ Create standard new vpn user 90 days.
                             .Authentication("apiUserName", "apiPassword")
                             .Package("STANDARD")
                             .Period(90)
-                            .Create()
-                            .Send();
+                            .Create(); 
 
 
             if (result.Result == 1)

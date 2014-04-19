@@ -16,8 +16,7 @@
                             .Authentication(apiUserName, apiPassword)
                             .Package("STANDARD")
                             .Period(90)
-                            .Create()
-                            .Send();
+                            .Create();                            
 
             Assert.AreEqual(1, result.Result);
             Assert.AreNotEqual(String.Empty, result.User);
@@ -29,10 +28,9 @@
         {
             var result = new VpnRequest()
                             .Authentication(apiUserName, apiPassword)
-                            .Username("vpnuser123")                            
+                            .Username("vpnuser123")
                             .Period(90)
-                            .Renew()
-                            .Send();
+                            .Renew();                            
 
             Assert.AreEqual(1, result.Result);
             Assert.AreNotEqual(String.Empty, result.User);
@@ -44,9 +42,8 @@
         {
             var result = new VpnRequest()
                             .Authentication(apiUserName, apiPassword)
-                            .Username("vpnuser123")                            
-                            .FindStatus()
-                            .Send();
+                            .Username("vpnuser123")
+                            .FindStatus();                            
 
             Assert.AreEqual(1, result.Result);
             Assert.AreNotEqual(String.Empty, result.User);
@@ -59,8 +56,7 @@
             var result = new VpnRequest()
                             .Authentication(apiUserName, apiPassword)
                             .Username("vpnuser123")
-                            .Delete()
-                            .Send();
+                            .Delete();                            
 
             Assert.AreEqual(1, result.Result);            
             Assert.AreNotEqual(String.Empty, result.Status);
@@ -72,8 +68,7 @@
             var result = new VpnRequest()
                             .Authentication(apiUserName, apiPassword)
                             .Username("vpnuser123")
-                            .Update("disable")
-                            .Send();
+                            .Update("disable");                            
 
             Assert.AreEqual(1, result.Result);            
         }
@@ -84,8 +79,7 @@
             var result = new VpnRequest()
                             .Authentication(apiUserName, apiPassword)
                             .Username("vpnuser123")
-                            .ChangePassword("p@ssw0rd")
-                            .Send();
+                            .ChangePassword("p@ssw0rd");
 
             Assert.AreEqual(1, result.Result);
         }
