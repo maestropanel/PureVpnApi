@@ -18,7 +18,7 @@
                             .Period(90)
                             .Create()
                             .Send();
-            
+
             Assert.AreEqual(1, result.Result);
             Assert.AreNotEqual(String.Empty, result.User);
             Assert.AreNotEqual(String.Empty, result.Password);
