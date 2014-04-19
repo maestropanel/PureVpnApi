@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PureVpnApi", "PureVpnApi\PureVpnApi.csproj", "{02D99639-CB04-4EA0-BA27-69C8D2983492}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PureVpnApi.Test", "PureVpnApi.Test\PureVpnApi.Test.csproj", "{5A16C72D-7A65-4658-85A9-AA86F3A8A8C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02D99639-CB04-4EA0-BA27-69C8D2983492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02D99639-CB04-4EA0-BA27-69C8D2983492}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02D99639-CB04-4EA0-BA27-69C8D2983492}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02D99639-CB04-4EA0-BA27-69C8D2983492}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A16C72D-7A65-4658-85A9-AA86F3A8A8C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A16C72D-7A65-4658-85A9-AA86F3A8A8C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A16C72D-7A65-4658-85A9-AA86F3A8A8C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A16C72D-7A65-4658-85A9-AA86F3A8A8C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
